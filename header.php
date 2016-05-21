@@ -12,12 +12,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo TITLE; ?></title>
   <link rel="stylesheet" href="css/foundation0.css">
 </head>
 <body>
+  <nav class="top-bar" data-topbar role="navigation">
+
 <!-- "wider" top-bar menu for 'medium' and up -->
-          <div id="widemenu" class="top-bar">
+    <div id="widemenu" class="top-bar">
               <div class="top-bar-left">
                   <ul class="dropdown menu">
                       <li class="background">
@@ -47,6 +52,8 @@
                   </ul>
               </div>
           </div>
+        </nav>
 </body>
+</html>
 
 <?php include 'footer.php'; ?>

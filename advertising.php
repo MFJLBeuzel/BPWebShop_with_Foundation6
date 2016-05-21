@@ -1,7 +1,16 @@
 <?php include "header.php" ?>
 
-<?php
-  echo '<h3>Advertising</h3>';
-  echo '<a href="http://ufc.com"></a>';
-  echo '<div id="ad"></div>';
-?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?php echo TITLE; ?></title>
+  <link rel="stylesheet" href="css/foundation0.css">
+</head>
+<body>
+  <div class="row">
+    <img class="advertisiment" src="images/reclame_bier.jpg" alt="advertisement">
+  </div>
+</body>
