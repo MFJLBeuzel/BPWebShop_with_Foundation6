@@ -1,6 +1,12 @@
 <?php
     define("TITLE", "Home | Maarten's Vinyl Shop");
     //constant named 'Title'
+    include 'connect.php';
+
+    session_start();
+    error_reporting(0);
+    /*A session is a way to store information (in variables) to be used across
+    multiple pages.*/
 ?>
 
 <!DOCTYPE html>

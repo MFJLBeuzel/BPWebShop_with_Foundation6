@@ -1,6 +1,6 @@
 <?php
 $site_title = 'Maarten Vinyl Shop';
-$site_url = 'http://localhost/BPWebShop(foundation)/';
+$site_url = 'http://localhost/BPWebShop(Foundation)/';
 $document_path = $site_url;
 
 $serverName = "MFJL\SQLEXPRESS";
