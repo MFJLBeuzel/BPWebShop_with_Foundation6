@@ -5,7 +5,7 @@
   <div id="contact">
           <hr>
           <h1>Get in touch with us!</h1>
-          
+
 <?php
     // Check for Header Injections
     // You dont't want people get junk mail with your company name
@@ -76,7 +76,9 @@ Go to Home Page</a></p>
   } else {
 ?>
           <form method="post" action="" id="contact-form">
+            <fieldset>
 
+          
               <label for="name">Your name</label>
               <input type="text" id="name" name="name">
 
@@ -92,7 +94,7 @@ Go to Home Page</a></p>
 
               <input type="submit" class="button next" name="contact_submit"
               value="Send Message">
-
+            </fieldset>
           </form>
   <?php
     }

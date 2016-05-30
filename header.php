@@ -54,7 +54,8 @@
               </div>
           </div>
         </nav>
+
 </body>
 </html>
 
-<?php include 'footer.php'; ?>
+    <?php include 'footer.php'; ?>
