@@ -54,8 +54,9 @@
               </div>
           </div>
         </nav>
+  <section class="footer">
+      <?php include 'footer.php'; ?>
+  </section>
 
 </body>
 </html>
-
-    <?php include 'footer.php'; ?>
