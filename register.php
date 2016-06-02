@@ -33,138 +33,121 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 ?>
 
 <div class="row">
-                  <div class="content">
-                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                        <div class="large-6 columns">
-                            <i class="subtitle">Fields with <span class="star">*</span> required</i>
-                            <table>
-                                <tr>
-                                    <td style="vertical-align:top">
-                                        username: <span class="star">*</span>
-                                    </td>
+  <div class="content">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+      <div class="large-6 columns">
+        <i class="subtitle">Fields with <span class="star">*</span> required</i>
+          <table>
+            <tr>
+              <td style="vertical-align:top">
+                username: <span class="star">*</span>
+              </td>
+              <td class="field">
+                <input type="text" name="username" placeholder="username" id="email" maxlength="50">
+                <div class="username-box"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                firstname: <span class="star">*</span>
+              </td>
+              <td class="field">
+                <input type="text" name="firstname" placeholder="Voornaam"
+                id="voornaam" onkeyup="check_voornaam()" maxlength="50">
+                  <div class="voornaam-box"></div>
+                    </td>
+            </tr>
+            <tr>
+                      <td>
+                  lastname: <span class="star">*</span>
+                  </td>
+                        <td class="field">
+                        <input type="text" name="lastname" placeholder="Achternaam"
+                        id="achternaam" onkeyup="check_achternaam()" maxlength="50">
+                    <div class="achternaam-box"></div>
+                      </td>
+            </tr>
+            <tr>
+                        <td>
+                  street: <span class="star">*</span>
+                </td>
+                      <td class="field">
+                        <input type="text" name="adres" placeholder="Adres" id="adres" onkeyup="check_adres()"
+                   maxlength="255">
+<div class="adres-box"></div>
+        </td>
+            </tr>
+            <tr>
+<td>
+number: <span class="star">*</span>
+</td>
                                     <td class="field">
-                                        <input type="text" name="username" placeholder="username" id="email" maxlength="50">
-                                        <div class="username-box"></div>
+                                        <input type="text" name="number" placeholder="number" id="number" onkeyup="check_number()"
+                                               maxlength="255">
+                                        <div class="adres-box"></div>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td style="vertical-align:top">
-                                        password: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                      <input type="password" name="password" placeholder="password" id="password" maxlength="30">
-                                      <div class="password-box"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="vertical-align:top">
-                                        Wachtwoord: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                        <input type="password" name="password" placeholder="Wachtwoord" id="password" onkeyup="check_password()" maxlength="30">
-                                        <div class="password-box"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="vertical-align:top">
-                                        Herhaal Wachtwoord: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                        <input type="password" name="confirmpassword" placeholder="Wachtwoord" id="second_password" onkeyup="check_second_password()"
-                                        maxlength="30">
-                                        <div class="second_password-box"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Voornaam: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                        <input type="text" name="firstname" placeholder="Voornaam" id="voornaam" onkeyup="check_voornaam()"
-                                               maxlength="50">
-                                        <div class="voornaam-box"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Achternaam: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                        <input type="text" name="lastname" placeholder="Achternaam" id="achternaam"
-                                        onkeyup="check_achternaam()" maxlength="50">
-                                        <div class="achternaam-box"></div>
-                                    </td>
-                                </tr>
+            </tr>
+
+
 
                             </table>
                         </div>
 
                         <div class="large-6 columns">
                             <table>
-                                <tr>
-                                    <td>
-                                        Adres: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                        <input type="text" name="adres" placeholder="Adres" id="adres" onkeyup="check_adres()"
-                                               maxlength="255">
-                                        <div class="adres-box"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Postcode: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                        <input type="text" name="postalcode" placeholder="1234 AB" id="postcode" onkeyup="check_postcode()"
-                                               maxlength="7">
-                                        <div class="postcode-box"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Plaats: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                        <input type="text" name="place" placeholder="Plaats"
-                                        id="plaats" onkeyup="check_plaats()" maxlength="25">
-                                        <div class="plaats-box"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Land: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                        <input type="text" name="country" placeholder="Land" id="land" onkeyup="check_land()" maxlength="50">
-                                        <div class="land-box"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Geboortedatum: <span class="star">*</span>
-                                    </td>
-                                    <td class="field">
-                                        <input id="datetimepicker" name="birthday" type="text" placeholder="&#xf073;  20/01/1990" class="fontawesome">
-                                        <div class="datum-box"></div>
 
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        Antwoord: <span class="star">*</span>
-                                    </td>
-                                    <td>
-                                        <input type="text" name="answer" placeholder="Antwoord" id="antwoord" onkeyup="check_antwoord()" maxlength="255">
-                                        <div class="antwoord-box"></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td><!--<div class="g-recaptcha" data-sitekey="<?php //echo $siteKey; ?>"></div>--></td>
-                                </tr>
+            <tr>
+                                  <td>
+                                      zipcode: <span class="star">*</span>
+                                  </td>
+                                  <td class="field">
+                                      <input type="text" name="zipcode" placeholder="1234 AB" id="zipcode" onkeyup="check_zipcode()"
+                                             maxlength="7">
+                                      <div class="zipcode-box"></div>
+                                  </td>
+            </tr>
+            <tr>
+                                  <td>
+                                      city: <span class="star">*</span>
+                                  </td>
+                                  <td class="field">
+                                      <input type="text" name="place" placeholder="Place"
+                                      id="place" onkeyup="check_place()" maxlength="25">
+                                      <div class="place-box"></div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      email: <span class="star">*</span>
+                                  </td>
+                                  <td class="field">
+                                      <input type="text" name="email" placeholder="email"
+                                      id="plaats" onkeyup="check_plaats()" maxlength="25">
+                                      <div class="plaats-box"></div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      gender: <span class="star">*</span>
+                                  </td>
+                                  <td class="field">
+                                      <input type="text" name="place" placeholder="Plaats"
+                                      id="plaats" onkeyup="check_plaats()" maxlength="25">
+                                      <div class="plaats-box"></div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="vertical-align:top">
+                                      password: <span class="star">*</span>
+                                  </td>
+                                  <td class="field">
+                                    <input type="password" name="password" placeholder="password" id="password" maxlength="30">
+                                    <div class="password-box"></div>
+                                  </td>
+                              </tr>
                             </table>
                             <input id="submitregister" type="submit" value="Registreren" class="rechts smallbtn" disabled>
                         </div>
                     </form>
+</div>
+</div>
