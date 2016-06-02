@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="css/foundation0.css">
   <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+
   <nav class="top-bar" data-topbar role="navigation">
 
 <!-- "wider" top-bar menu for 'medium' and up -->
@@ -54,9 +54,8 @@
               </div>
           </div>
         </nav>
-  <section class="footer">
+      <section class="footer">
+        <div class="row">
       <?php include 'footer.php'; ?>
+  </div>
   </section>
-
-</body>
-</html>
