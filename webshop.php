@@ -35,33 +35,18 @@
       </form>
 
       <div class="list">
-        <?php if($conn)
-{
-echo "Connection established.<br />";
-$tsql = "SELECT AFBEELDING_KLEIN from Product";
-$result = sqlsrv_query( $conn, $tsql, null);
-
-if ( $result === false)
-{
-die( print_r( sqlsrv_errors() ) );
-}
-while( $row = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC))
-{
-echo $row['AFBEELDING_KLEIN']."<br />";
-}
-sqlsrv_free_stmt($result);
-sqlsrv_close($conn);
-} else
-{
-echo "Connection could not be established.<br />";
-die( print_r( sqlsrv_errors(), true));
-}
-?>
-
-        <img src="<?php echo $row[images1]?>" width="180" />
-        <img src="source.php?id=2" width="180" />
+        <?php
+        $sql ="SELECT AFBEELDING_KLEIN FROM Product";
+        $params = array();
+        $stmt = sqlsrv_query($conn, $sql, $params);
+        if ($stmt === false) {
+          die (print_r(sqlsrv_errors(), true));
+        }
+        else {
+          echo "string";
+        }
+    ?>
       </div>
-
     </div>
   </div>
 </div>

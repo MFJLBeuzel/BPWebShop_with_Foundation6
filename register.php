@@ -145,9 +145,9 @@ number: <span class="star">*</span>
                                     <div class="password-box"></div>
                                   </td>
                               </tr>
-                            </table>
-                            <input id="submitregister" type="submit" value="Registreren" class="rechts smallbtn" disabled>
-                        </div>
-                    </form>
+          </table>
+        <input type="submit" value="Register" class="rechts smallbtn">
+      </div>
+    </form>
 </div>
 </div>
