@@ -3,7 +3,7 @@
 <html>
   <div class="row">
     <div class="content">
-      <div class="large-8 columns">
+      <div class="large-9 columns">
         <form action="login.php" method="post">
           <table>
             <tr>
@@ -38,8 +38,13 @@
               <br/>
               <br/>
       </div>
-    </div>
+      <div class="large-3 columns">
+        <aside>
+          <p>
+        <img src="images/advertisement.jpg" /></p>
+          </aside>
+      </div>
   </div>
-</body>
+</div>
 
 </html>
