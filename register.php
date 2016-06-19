@@ -19,10 +19,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       ACHTERNAAM, STRAATNAAM, HUISNUMMER, POSTCODE, WOONPLAATS, EMAIL, SEXE,
       WACHTWOORD) VALUES ('$username', '$firstname', '$lastname', '$street',
       '$number', '$zipcode', '$city', '$email', '$gender', '$password')";
-            }
-            else{
+      if(sqlsrv_query($db,$sql)){  }
+      else{
                 if( ($errors = sqlsrv_errors() ) != null) {
-                    foreach( $errors as $error ) {
+                    foresach( $errors as $error ) {
                             echo "SQLSTATE: ".$error[ 'SQLSTATE']."<br />";
                             echo "code: ".$error[ 'code']."<br />";
                             echo "message: ".$error[ 'message']."<br />";
@@ -31,6 +31,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 }
   }
 ?>
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
 
 <div class="row">
   <div class="content">
@@ -52,8 +58,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 firstname: <span class="star">*</span>
               </td>
               <td class="field">
-                <input type="text" name="firstname" placeholder="Voornaam"
-                id="voornaam" onkeyup="check_voornaam()" maxlength="50">
+                <input type="text" name="firstname" placeholder="firstname"
+                id="firstname" maxlength="50">
                   <div class="voornaam-box"></div>
                     </td>
             </tr>
@@ -62,8 +68,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                   lastname: <span class="star">*</span>
                   </td>
                         <td class="field">
-                        <input type="text" name="lastname" placeholder="Achternaam"
-                        id="achternaam" onkeyup="check_achternaam()" maxlength="50">
+                        <input type="text" name="lastname" placeholder="lastname"
+                        id="lastname" maxlength="50">
                     <div class="achternaam-box"></div>
                       </td>
             </tr>
@@ -72,7 +78,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                   street: <span class="star">*</span>
                 </td>
                       <td class="field">
-                        <input type="text" name="adres" placeholder="Adres" id="adres" onkeyup="check_adres()"
+                        <input type="text" name="adres" placeholder="Adres" id="adres"
                    maxlength="255">
 <div class="adres-box"></div>
         </td>
@@ -112,7 +118,7 @@ number: <span class="star">*</span>
                                   </td>
                                   <td class="field">
                                       <input type="text" name="place" placeholder="Place"
-                                      id="place" onkeyup="check_place()" maxlength="25">
+                                      id="place"  maxlength="25">
                                       <div class="place-box"></div>
                                   </td>
                               </tr>
@@ -132,7 +138,7 @@ number: <span class="star">*</span>
                                   </td>
                                   <td class="field">
                                       <input type="text" name="place" placeholder="Plaats"
-                                      id="plaats" onkeyup="check_plaats()" maxlength="25">
+                                      id="plaats" maxlength="25">
                                       <div class="plaats-box"></div>
                                   </td>
                               </tr>
@@ -146,8 +152,10 @@ number: <span class="star">*</span>
                                   </td>
                               </tr>
           </table>
-        <input type="submit" value="Register" class="rechts smallbtn">
+      <input id="submit" type="submit" value="Submit" class="rechts smallbtn" >
       </div>
     </form>
 </div>
 </div>
+</body>
+</html>

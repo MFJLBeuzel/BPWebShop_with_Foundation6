@@ -36,16 +36,23 @@
 
       <div class="list">
         <?php
-        $sql ="SELECT AFBEELDING_KLEIN FROM Product";
-        $params = array();
-        $stmt = sqlsrv_query($conn, $sql, $params);
-        if ($stmt === false) {
-          die (print_r(sqlsrv_errors(), true));
-        }
-        else {
-          echo "string";
-        }
-    ?>
+        if ($conn)
+        {
+          $tsql = "SELECT AFBEELDING_KLEIN FROM Product";
+          $result = sqlsrv_query($conn, $tsql, null);
+          }
+          if ($result === false)
+          {
+            die(print_r(sqlsrv_errors()));
+          }
+          while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
+          {
+            echo $row['AFBEELDING_KLEIN']."<br/>";
+
+          }
+
+
+?>
       </div>
     </div>
   </div>
