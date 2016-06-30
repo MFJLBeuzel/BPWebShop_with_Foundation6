@@ -38,7 +38,7 @@
         <?php
         if ($conn)
         {
-          $tsql = "SELECT AFBEELDING_KLEIN FROM Product";
+          $tsql = "SELECT AFBEELDING_KLEIN, PRODUCTNAAM FROM Product";
           $result = sqlsrv_query($conn, $tsql, null);
           }
           if ($result === false)
@@ -47,11 +47,8 @@
           }
           while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
           {
-            echo $row['AFBEELDING_KLEIN']."<br/>";
-
+            echo $row['AFBEELDING_KLEIN']. "<br/>" .$row['PRODUCTNAAM']."<br/>";
           }
-
-
 ?>
       </div>
     </div>
